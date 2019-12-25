@@ -1,0 +1,40 @@
+{
+  "name": "@vighnesh153/random",
+  "version": "1.0.0",
+  "description": "A collection of some 'random-generation' functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "rm -rf dist/ && tsc",
+    "test:coverage": "jest --coverage --config jestconfig.json",
+    "test:coveralls": "jest --config jestconfig.json --coverage --coverageReporters=text-lcov | coveralls"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:rv-npm/vighnesh153-random.git"
+  },
+  "keywords": [
+    "random",
+    "randint",
+    "choice",
+    "shuffle",
+    "sample"
+  ],
+  "author": "Vighnesh Raut",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/rv-npm/vighnesh153-random/issues",
+  },
+  "homepage": "https://github.com/rv-npm/vighnesh153-random#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.24",
+    "coveralls": "^3.0.9",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.4"
+  }
+}

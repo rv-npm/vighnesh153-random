@@ -1,0 +1,23 @@
+language: node_js
+cache:
+  directories:
+    - $HOME/.npm
+notifications:
+  email: false
+node_js:
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+before_script:
+  - npm prune
+after_script:
+  - npm test
+  - npm run test:coveralls
+  - npm run build
+
+branches:
+  only:
+    - "master"
