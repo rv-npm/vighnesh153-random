@@ -1,27 +1,43 @@
+import * as random from "./random";
+
 import ThrowError from "../helpers/ThrowError";
 import NumberUtil from "../helpers/NumberUtil";
 
 
-const randomInt = (start: number, stop: number, step: number = 1): number => {
-    if (start === undefined) {
-        ThrowError.argumentNotSpecified('start');
+
+// Using the 'function' keyword, instead of arrow functions,
+// to get access to the 'arguments' object within it.
+// Arrow functions don't have an 'arguments' object, at least in TypeScript.
+const randomInt = function (rangeStart?: number, rangeStop?: number,
+                            rangeStep?: number, ...ignoredParams: any[]): number {
+
+    if (arguments.length === 0) {
+        ThrowError.argumentNotSpecified('start, stop');
     }
 
-    if (stop === undefined) {
+    if (arguments.length === 1) {
         ThrowError.argumentNotSpecified('stop');
     }
 
-    if (!NumberUtil.isNumber(start) || !NumberUtil.isInt(start)) {
+    if (!NumberUtil.isNumber(rangeStart) || !NumberUtil.isInt(rangeStart)) {
         ThrowError.invalidArgumentType('start');
     }
 
-    if (!NumberUtil.isNumber(stop) || !NumberUtil.isInt(stop)) {
+    if (!NumberUtil.isNumber(rangeStop) || !NumberUtil.isInt(rangeStop)) {
         ThrowError.invalidArgumentType('stop');
     }
 
-    if (!NumberUtil.isNumber(step) || !NumberUtil.isInt(step)) {
+    if (rangeStep === undefined) {
+        rangeStep = 1;
+    }
+
+    if (!NumberUtil.isNumber(rangeStep) || !NumberUtil.isInt(rangeStep)) {
         ThrowError.invalidArgumentType('step');
     }
+
+    const start = Number(rangeStart);
+    const stop = Number(rangeStop);
+    const step = Number(rangeStep);
 
     if (start === stop) {
         return start;
@@ -36,17 +52,14 @@ const randomInt = (start: number, stop: number, step: number = 1): number => {
         throw new Error('Range is empty.')
     }
 
-    if (start > stop) {
-        [start, stop] = [stop, start];
-        step *= -1;
-    }
+    let totalNumbersInRange = Math.abs(Math.ceil((stop - start) / step));
+    const firstValidNumberAfterStop = stop - (step < 0 ? 1 : 0);
 
-    let totalNumbersInRange = Math.ceil((stop - start) / step);
-    if (totalNumbersInRange * step + start === stop) {
+    if (totalNumbersInRange * step + start === firstValidNumberAfterStop) {
         totalNumbersInRange--;
     }
 
-    const randomIndex = Math.floor(Math.random() * totalNumbersInRange);
+    const randomIndex = Math.floor(random.default() * totalNumbersInRange);
     return start + randomIndex * step;
 };
 

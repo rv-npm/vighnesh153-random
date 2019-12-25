@@ -4,7 +4,7 @@ export default class NumberUtil {
         return Number(obj) === obj;
     };
 
-    static isInt = (n: number): boolean => {
-        return n % 1 === 0;
+    static isInt = (n: number | undefined): boolean => {
+        return Number(n) % 1 === 0;
     };
 }

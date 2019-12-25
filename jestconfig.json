@@ -2,6 +2,11 @@
   "transform": {
     "^.+\\.(t|j)sx?$": "ts-jest"
   },
+  "coveragePathIgnorePatterns": [
+    "node_modules",
+    "src/interfaces",
+    "src/helpers"
+  ],
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
 }

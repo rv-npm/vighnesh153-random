@@ -1,6 +1,17 @@
 import Random from '../src/index';
 
 
+test('invalid number of arguments', () => {
+
+    expect(() => {
+        Random.randomInt();
+    }).toThrow();
+
+    expect(() => {
+        Random.randomInt(1);
+    }).toThrow();
+});
+
 test('"randomInt" non-integer argument ' +
     'passed to start should throw error', () => {
 
@@ -106,4 +117,27 @@ test('random number should lie between the ' +
     check(-999, 1000, 243);
     check(-999, 1000, 23);
     check(-999, 1000, 6);
+});
+
+test('check for negative step', () => {
+
+    const check = (rangeStart: number, rangeStop: number, rangeStep: number): void => {
+        const randomNumber = Random.randomInt(rangeStart, rangeStop, rangeStep);
+
+        expect(randomNumber).toBeGreaterThan(rangeStop);
+        expect(randomNumber).toBeLessThanOrEqual(rangeStart);
+        expect((randomNumber - rangeStart) % rangeStep === 0).toBeTruthy();
+    };
+
+    check(100, -52, -9);
+    check(43928, -4286, -247);
+    check(1342876400, -523423987, -38);
+    check(100, 99, -1);
+    check(100, 45, -1);
+    check(100, 45, -1);
+    check(100, 45, -1);
+    check(100, 45, -1);
+    check(100, 45, -1);
+    check(100, 45, -1);
+    check(100, 45, -1);
 });
