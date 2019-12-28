@@ -1,4 +1,4 @@
-import Random from "../src";
+import { Random } from "../src";
 
 
 test('no argument specified should throw', () => {

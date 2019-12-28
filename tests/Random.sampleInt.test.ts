@@ -1,6 +1,6 @@
 import NumberUtil from "../src/helpers/NumberUtil";
 
-import Random from "../src";
+import { Random } from "../src";
 
 
 test('Test if the method returns integer sample', () => {

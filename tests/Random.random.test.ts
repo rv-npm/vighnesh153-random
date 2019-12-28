@@ -1,4 +1,4 @@
-import Random from '../src/index';
+import { Random } from '../src';
 
 
 const check = () => {

@@ -1,4 +1,4 @@
-import Random from "../src";
+import { Random } from "../src";
 
 
 test('Test if the method returns correct sample', () => {

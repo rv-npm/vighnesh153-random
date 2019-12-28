@@ -1,4 +1,4 @@
-import Random from "../src";
+import { Random } from "../src";
 
 
 test('check for when no arguments are passed', () => {
