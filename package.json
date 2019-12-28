@@ -22,7 +22,12 @@
     "randint",
     "choice",
     "shuffle",
-    "sample"
+    "sample",
+    "randomRange",
+    "random integer",
+    "random range",
+    "sampleRange",
+    "sample range"
   ],
   "author": "Vighnesh Raut",
   "license": "GPL-3.0-or-later",
