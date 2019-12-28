@@ -6,7 +6,7 @@ import shuffle from "./methods/shuffle";
 import sample from "./methods/sample";
 import sampleInt from "./methods/sampleInt";
 
-export default class Random {
+export class Random {
 
     static random = random;
     static randomInt = randomInt;
