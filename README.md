@@ -16,9 +16,6 @@
   <img alt="npm" src="https://img.shields.io/npm/dt/@vighnesh153/random">
 </p>
 
-# @vighnesh153/random
-
-
 > A collection of some 'random-generation' functions
 
 ### 🏠 [Homepage](https://github.com/rv-npm/vighnesh153-random#readme)
