@@ -26,8 +26,8 @@
     "randomRange",
     "random integer",
     "random range",
-    "sampleRange",
-    "sample range"
+    "sampleInt",
+    "sample int"
   ],
   "author": "Vighnesh Raut",
   "license": "GPL-3.0-or-later",
