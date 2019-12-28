@@ -1,6 +1,6 @@
 <h1>Welcome to @vighnesh153/random 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.2-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/rv-npm/vighnesh153-random/blob/master/LICENSE" target="_blank">
     <img alt="License: GPL--3.0--or--later" src="https://img.shields.io/badge/License-GPL--3.0--or--later-yellow.svg" />
   </a>
