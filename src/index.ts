@@ -4,6 +4,7 @@ import randomRange from "./methods/randomRange";
 import choice from "./methods/choice";
 import shuffle from "./methods/shuffle";
 import sample from "./methods/sample";
+import sampleInt from "./methods/sampleInt";
 
 export default class Random {
 
@@ -13,4 +14,5 @@ export default class Random {
     static choice = choice;
     static shuffle = shuffle;
     static sample = sample;
+    static sampleInt = sampleInt;
 }
