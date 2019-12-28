@@ -1,6 +1,6 @@
 {
   "name": "@vighnesh153/random",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A collection of some 'random-generation' functions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,7 +22,12 @@
     "randint",
     "choice",
     "shuffle",
-    "sample"
+    "sample",
+    "randomRange",
+    "random integer",
+    "random range",
+    "sampleInt",
+    "sample int"
   ],
   "author": "Vighnesh Raut",
   "license": "GPL-3.0-or-later",
