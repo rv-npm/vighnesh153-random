@@ -32,12 +32,12 @@ npm i -S @vighnesh153/random
 
 #### Include in TS 
 ```
-import Random from '@vighnesh153/random';
+import { Random } from '@vighnesh153/random';
 ```
 
 #### Include in JS
 ```
-const Random = require('@vighnesh153/random');
+const { Random } = require('@vighnesh153/random');
 ```
 
 #### random()
