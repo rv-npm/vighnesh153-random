@@ -1,6 +1,6 @@
 {
   "name": "@vighnesh153/random",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A collection of some 'random-generation' functions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
