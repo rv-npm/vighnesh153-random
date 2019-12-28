@@ -25,11 +25,68 @@
 
 ## Installation
 ```
-npm install -S @vighnesh153/random
+npm i -S @vighnesh153/random
 ``` 
 
 ## Usage
-In progress
+
+#### Include in TS 
+```
+import Random from '@vighnesh153/random';
+```
+
+#### Include in JS
+```
+const Random = require('@vighnesh153/random');
+```
+
+#### random()
+Generate a random floating point number between 0 (inclusive) and 1 (exclusive).
+```JS
+const someRandomNumber = Random.random();
+```
+
+#### randomInt(start: number, stop: number, [step: number])
+Generate a random integer between `start` (inclusive) and `stop` (exclusive) with steps of `step`.
+Default `step` is `1`.
+```JS
+// Get a random integer between 3 and 30 with steps of 5 ie., choose one of 3, 8, 13, 18, 23, 28.
+const someRandomNumber = Random.randomInt(3, 30, 5);
+```
+
+#### randomRange(start: number, stop: number)
+Generate a random floating point between `start` (inclusive) and `stop` (exclusive).
+```JS
+// Get a random floating point number between 5 and 10.
+const someRandomNumber = Random.randomInt(5, 10);
+```
+
+#### choice(array: [])
+Get a random element from the array.
+```JS
+const someRandomElement = Random.choice([1, 2, 'a', 'b']);
+```
+
+#### shuffle(sequence: [] | string)
+Generates a random permutation of the provided sequence. Input accepted is `array` or `string` and output will be array. 
+In case of string, each character of the string will be an element of the return array.
+```JS
+const shuffledSequence = Random.choice([1, 2, 3, 4, 5]);
+```
+
+#### sampleInt(start: number, stop: number, count: number)
+Returns an array with `count` elements and each element will be 
+a random integer between `start`(inclusive) and `stop`(exclusive).
+```JS
+const sampleIntegers = Random.sample(2, 10, 5);
+```
+
+#### sample(start: number, stop: number, count: number)
+Returns an array with `count` elements and each element will be 
+a random floating point number between `start`(inclusive) and `stop`(exclusive).
+```JS
+const sampleNumbers = Random.choice(0.54, 8, 4);
+```
 
 ## Author
 
