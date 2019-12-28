@@ -1,12 +1,14 @@
-import * as random from "./methods/random";
-import * as randomInt from "./methods/randomInt";
-import * as randomRange from "./methods/randomRange";
-import * as choice from "./methods/choice";
+import random from "./methods/random";
+import randomInt from "./methods/randomInt";
+import randomRange from "./methods/randomRange";
+import choice from "./methods/choice";
+import shuffle from "./methods/shuffle";
 
 export default class Random {
 
-    static random = random.default;
-    static randomInt = randomInt.default;
-    static randomRange = randomRange.default;
-    static choice = choice.default;
+    static random = random;
+    static randomInt = randomInt;
+    static randomRange = randomRange;
+    static choice = choice;
+    static shuffle = shuffle;
 }
