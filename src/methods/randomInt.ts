@@ -52,12 +52,15 @@ const randomInt = function (rangeStart?: number, rangeStop?: number,
         throw new Error('Range is empty.')
     }
 
-    let totalNumbersInRange = Math.abs(Math.ceil((stop - start) / step));
-    const firstValidNumberAfterStop = stop - (step < 0 ? 1 : 0);
-
-    if (totalNumbersInRange * step + start === firstValidNumberAfterStop) {
+    let totalNumbersInRange = Math.abs(Math.ceil((stop - start) / step)) + 2;
+    const comparisionMultiple = step < 0 ? -1 : 1;
+    let lastNumber;
+    do {
+        lastNumber = (start + step * (totalNumbersInRange - 1))
+                    * comparisionMultiple;
         totalNumbersInRange--;
     }
+    while (lastNumber >= stop * comparisionMultiple);
 
     const randomIndex = Math.floor(random.default() * totalNumbersInRange);
     return start + randomIndex * step;
