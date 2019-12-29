@@ -43,7 +43,7 @@ Generate a random floating point number between 0 (inclusive) and 1 (exclusive).
 const someRandomNumber = Random.random();
 ```
 
-#### randomInt(start: number, stop: number, [step: number])
+#### randomInt(start: number, stop: number[, step: number])
 Generate a random integer between `start` (inclusive) and `stop` (exclusive) with steps of `step`.
 Default `step` is `1`.
 ```JS
