@@ -8,24 +8,24 @@ test('no argument specified should throw', () => {
     }).toThrow();
 });
 
-test('throw if argument is not an Array', () => {
+// test('throw if argument is not an Array', () => {
+//
+//     expect(() => {
+//         const choice = Random.choice(undefined);
+//     }).toThrow();
+// });
 
-    expect(() => {
-        const choice = Random.choice(undefined);
-    }).toThrow();
-});
-
-test('return undefined if array passed is empty', () => {
+test('return undefined if array or string passed is empty', () => {
 
     expect(Random.choice([])).toBeUndefined();
+    expect(Random.choice("")).toBeUndefined()
 });
 
 test('check with multiple elements', () => {
 
-    const check = (sequence: any[]) => {
-        const choice = Random.choice(sequence);
+    const check = (sequence: any) => {
 
-        expect(sequence).toContain(choice);
+        expect(sequence).toContain(Random.choice(sequence));
     };
 
     check([1]);
@@ -34,4 +34,7 @@ test('check with multiple elements', () => {
     check([90, 21]);
     check(['a', 'ds', 44]);
     check([{ a: 1 }, 32, 55, '2']);
+    check('s');
+    check('some random collection of words');
+    check('vighnesh');
 });
