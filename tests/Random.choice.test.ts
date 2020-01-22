@@ -8,13 +8,6 @@ test('no argument specified should throw', () => {
     }).toThrow();
 });
 
-// test('throw if argument is not an Array', () => {
-//
-//     expect(() => {
-//         const choice = Random.choice(undefined);
-//     }).toThrow();
-// });
-
 test('return undefined if array or string passed is empty', () => {
 
     expect(Random.choice([])).toBeUndefined();

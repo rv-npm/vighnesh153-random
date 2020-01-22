@@ -8,10 +8,6 @@ const choice = function(sequence?: any, ...ignoredParams: any[]) {
         ThrowError.argumentNotSpecified('sequence');
     }
 
-    // if (Array.isArray(sequence) === false) {
-    //     ThrowError.invalidArgumentType('sequence');
-    // }
-
     const iterable = Array.from(sequence);
 
     if (iterable.length === 0) {
